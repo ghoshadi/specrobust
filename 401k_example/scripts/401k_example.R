@@ -54,7 +54,7 @@ run_collection <- function(label, adj_sets) {
   saveRDS(out, file.path(results_dir, sprintf("401k_default_%s.rds", label)))
 
   f <- file.path(plots_dir, sprintf("401k_default_%s_weights.pdf", label))
-  pdf(f, width = 12, height = 3.9)
+  pdf(f, width = 3 * 3.5 * 16/9, height = 3.5, pointsize = 20)
   plot(out, covariates = c("age", "educ", "income"),
        breaks = list(25, "unit", 25),
        legend.pos = c("topright", "topleft", "topright"))

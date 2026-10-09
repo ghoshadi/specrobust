@@ -79,7 +79,7 @@ stack_weight_grid <- function(data, weights, vars, labels = NULL, breaks = 25,
   ylim <- lapply(seq_len(nc), function(j)
     range(unlist(lapply(cells, function(row) row[[j]]$d))))
 
-  op <- par(mfrow = c(nr, nc), mar = c(4.0, 4.2, 2.4, 0.8),
+  op <- par(mfrow = c(nr, nc), mar = c(3.3, 4.2, 1.8, 0.8),
             mgp = c(2.3, 0.8, 0))
   on.exit(par(op))
   col <- adjustcolor(c(hcol, hcol2), alpha.f = 0.6)
@@ -117,7 +117,7 @@ run_collection <- function(label, adj_sets) {
   names(outs) <- vapply(specs, `[[`, character(1), "tag")
 
   f <- file.path(plots_dir, sprintf("401k_protect_%s_weights.pdf", label))
-  pdf(f, width = 12, height = 3.9 * length(outs))
+  pdf(f, width = 3 * 3.5 * 16/9, height = 3.5 * length(outs), pointsize = 20)
   stack_weight_grid(df, lapply(outs, `[[`, "weights"),
                     vars = c("age", "educ", "income"),
                     labels = vapply(specs, `[[`, character(1), "label"),

@@ -146,7 +146,7 @@ plot.specrobust = function(x, type = c("covariates", "weights"),
 
   nc = min(3, length(vars))
   nr = ceiling(length(vars)/nc)
-  op = graphics::par(mfrow = c(nr, nc), mar = c(4.0, 4.2, 2.4, 0.8),
+  op = graphics::par(mfrow = c(nr, nc), mar = c(3.3, 4.2, 0.6, 0.8),
                      mgp = c(2.3, 0.8, 0))
   on.exit(graphics::par(op))
   col = grDevices::adjustcolor(c(hcol, hcol2), alpha.f = 0.6)

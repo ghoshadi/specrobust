@@ -1,0 +1,17 @@
+n = 1000, one replication (seed 123)
+  true ATE  tau_bar               : 1.0000
+  adj set 1  estimate of tau_bar   :   1.4604   CI [  0.8966,   2.0242]
+  adj set 2  estimate of tau_bar   :  -0.8973   CI [ -1.2975,  -0.4972]
+  convex hull of the above        :            CI [ -1.2975,   2.0242]
+  proposed estimand  tau_R        :   0.2245   CI [ -0.3819,   0.8310]
+  lambda*                         :  -0.5313
+
+n = 1e+07, oracle (seed 123)
+  oracle tau_R                    :   0.4091
+  lambda*                         :  -0.6462
+  reweighted estimates per set    : 0.4091, 0.4091
+  moments of the shared covariate X1 and of X2:
+    X1  original   mean  -0.0000  var   1.0003
+    X1  reweighted mean  -1.1816  var   0.9970
+    X2  original   mean   0.0004  var   2.0004
+    X2  reweighted mean   0.0006  var   2.0004
